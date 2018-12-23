@@ -1,0 +1,33 @@
+.hero {
+	background: url('./assets/images/head_bg1800.jpg') center center/ cover no-repeat;
+
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	&__socials {
+		position: absolute;
+		top: 20px;
+		left: 20px;
+
+	}
+
+	&__menu {
+		position: absolute;
+		top: 40px;
+		right: 20px;
+	}
+
+	&__arrow-down {
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%)
+	}
+
+	&__user-content {
+		// height: 25rem;
+		// width: 25rem;
+	}
+}

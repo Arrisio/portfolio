@@ -1,0 +1,25 @@
+.user {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__pic {
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: contain;
+		overflow: hidden;
+		width: 240px;
+		height: 240px;
+		flex-shrink: 0;
+		border-radius: 50%;
+
+	}
+
+	&__pic-img {
+		object-fit: fill;
+		display: block;
+		border-style: none;
+		max-height: 100%;
+		max-width: 100%;
+	}
+}

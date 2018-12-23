@@ -16,6 +16,7 @@ const del = require("del");
 gulp.task("styles", () => {
   return gulp
     .src(`${config.SRC_DIR}/styles/main.scss`)
+    // .src(`${config.SRC_DIR}/styles/**/*.scss`)
     .pipe($gp.sourcemaps.init())
     .pipe($gp.plumber())
     .pipe($gp.postcss(require("./postcss.config")))
@@ -81,7 +82,7 @@ gulp.task("server", () => {
 });
 
 // спрайт иконок
-gulp.task("svg", done => {
+gulp.task("svg", () => {
   return gulp
     .src(`${config.SRC_DIR}/images/icons/*.svg`)
     .pipe(
@@ -130,13 +131,15 @@ gulp.task("images", () => {
     .pipe(gulp.dest(`${config.DIST_DIR}/assets/images/`));
 });
 
+var watch = require('gulp-watch');
+
 // галповский вотчер
 gulp.task("watch", () => {
-  gulp.watch(`${config.SRC_DIR}/styles/**/*.scss	`, gulp.series("styles"));
-  gulp.watch(`${config.SRC_DIR}/images/**/*.*`, gulp.series("images"));
-  gulp.watch(`${config.SRC_DIR}/scripts/**/*.js`, gulp.series("scripts"));
-  gulp.watch(`${config.SRC_DIR}/fonts/*`, gulp.series("fonts"));
-  gulp.watch(`${config.VIEWS_DIR}/**/*.pug`, gulp.series("pug"));
+  watch(`${config.SRC_DIR}/styles/**/*.scss`, gulp.series("styles"));
+  watch(`${config.SRC_DIR}/images/**/*.*`, gulp.series("images"));
+  watch(`${config.SRC_DIR}/scripts/**/*.js`, gulp.series("scripts"));
+  watch(`${config.SRC_DIR}/fonts/*`, gulp.series("fonts"));
+  watch(`${config.VIEWS_DIR}/**/*.pug`, gulp.series("pug"));
 });
 
 // GULP:DEV

@@ -1,0 +1,15 @@
+{'FrontEnd':{
+            'HTML5':50;
+            'CSS3':50;
+            'Javascript & JQuery':50;
+          },
+          'BackEnd':{
+            'Python':50;
+            'Oracle':50;
+          },
+          'WorkFlow':{
+            'Git':50;
+            'Gulp':50;
+            'Docker':50;
+          }
+        }

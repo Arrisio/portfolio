@@ -1,0 +1,72 @@
+.hamburger {
+	position: static;
+	vertical-align: middle;
+	position: relative;
+	height: 45px;
+	align-items: center;
+
+
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+
+	// Код из Бургеров
+	// position: relative;
+	// display: none;
+
+	// @include tablets {
+	// 	display: flex;
+	// 	position: fixed;
+	// 	top: 2.2rem;
+	// 	right: 2.2rem;
+	// 	z-index: 2;
+	// }
+
+	// Вынес из Таблетс выше
+
+	// position: fixed;
+	display: flex;
+
+	&__bars {
+
+		&,
+		&:before,
+		&:after {
+			background: #fff;
+			width: 40px;
+			height: 5px;
+			border-radius: rem(3px);
+			transition: transform .3s;
+		}
+
+		&:before,
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+		}
+
+		&:before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+
+		}
+
+		.is-active & {
+
+			background-color: transparent;
+
+			&:before {
+				transform: translateY(rem(9px)) rotate(45deg);
+			}
+
+			&::after {
+				transform: translateY(rem(-9px)) rotate(-45deg);
+			}
+		}
+
+	}
+}

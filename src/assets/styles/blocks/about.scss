@@ -1,0 +1,40 @@
+.about {
+	display: flex;
+
+
+
+	&__col {
+		// position: relative;
+		width: 50%;
+		background-color: $bg_biege;
+
+		&:nth-child(even) {
+			background: $bg_grey;
+		}
+	}
+
+
+	&__left_title {
+		margin-bottom: 35px;
+	}
+
+	&__triangle-left {
+		margin-top: -10vh;
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 10vh 0 0 49.5vw;
+		border-color: transparent transparent transparent $bg_biege
+	}
+
+	&__triangle-right {
+		margin-top: -10vh;
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 0 10vh 49.75vw;
+		border-color: transparent transparent $bg_grey transparent;
+	}
+}

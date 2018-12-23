@@ -7,4 +7,86 @@ block scripts
   script(src='about.bundle.js')
 
 block content
-  h1 Страничка "Обо Мне"  
+  section.hero
+    .hero__socials
+      ul.socials
+        each  social in ['vk', 'github', 'in']
+          li.socials__item
+            a(href="").socials__link
+              +icon(social, 'socials__icon')
+    .hero__menu
+      a.hamburger
+        .hamburger__bars
+
+    .hero__content
+      .hero__user-desc
+        .user
+          .user__pic-container
+            .user__pic
+              +image('myphoto.jpg', 'page title' , 'user__pic-img')
+          .user__info
+            .user__name Сучков Дмитрий
+            .user__desc Личный сайт
+
+    .hero__arrow-down
+
+  section.about
+    .about__col
+      .about__triangle-left
+      .about__left_title
+        h1.title Обо мне
+      .about__user-info
+        .user-info
+          .user-info__avatar
+            +image('myphoto.jpg', 'page title' , 'user__pic-img')
+          .user-info__title
+            h2.subtitle Кто  я
+          .user-info__text.text-block
+            p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam modi et molestiae natus accusamus odit voluptatum debitis mollitia omnis eaque voluptates impedit deserunt officiis blanditiis, fugiat voluptatem facere incidunt ab!
+            p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam modi et molestiae natus accusamus odit voluptatum debitis mollitia omnis eaque voluptates impedit deserunt officiis blanditiis, fugiat voluptatem facere incidunt ab!
+    .about__col
+      .about__triangle-right
+      .about__left_title
+        h2.subtitle Чем я могу вам быть вам полезен
+      .about__desc-text.text-block
+        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem cupiditate distinctio exercitationem voluptate facilis quam aut ullam numquam modi vitae obcaecati aliquid inventore natus et perspiciatis fuga minima, earum adipisci?
+
+      .about__content
+        ul.skills
+          -
+            var fullSkillsList = {
+              'FrontEnd':{'HTML5':50,'CSS3':50,'Javascript & JQuery':50},
+              'BackEnd':{'Python':50,'Oracle':50},
+              'WorkFlow':{'Git':50,'Gulp':50,'Docker':50}
+              }
+          each skillsList, skillsAreaName in fullSkillsList
+            li.skills__item.skillsArea
+              .skillsArea__title #{skillsAreaName}
+              ul.skillsArea__list
+                each skillValue, skillName in skillsList
+                  li.skillsArea__item
+                    .skill
+                      .skill__circles
+                        svg.skill__circle.skill__circle--under
+                        svg.skill__circle.skill__circle--above
+                      .skill__title #{skillName}
+
+  section.map
+    #map
+    .map__content
+      .contacts
+        .contacts__title
+          h2.subtitle Контакты
+        ul.contacts__list
+          -
+            var contactsList = [
+              {'icon': 'skype_n', 'info':'skype'},
+              {'icon': 'envelope_n', 'info':'zemlak@list.ru'},
+              {'icon': 'phone_n', 'info':'+7 123 1235588'},
+              {'icon': 'map_n', 'info':'Москва, ул. Нижняя Лихосранская д.5'}
+            ]
+          each contact in contactsList
+            li.contacts__item
+              +icon(contact.icon, 'contacts__icon')
+              .contacts__info #{contact.info}
+
