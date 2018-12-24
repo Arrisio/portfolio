@@ -1,4 +1,4 @@
-@mixin small-desktop {
+@mixin laptop {
 	@media (max-width: $small_desktop_screen_width) {
 		@content;
 	}

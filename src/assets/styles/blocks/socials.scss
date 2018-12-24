@@ -1,3 +1,7 @@
 .socials {
 	display: flex;
+
+	&__icon {
+		fill: $white;
+	}
 }
