@@ -5,17 +5,31 @@
 
 	&__col {
 		// position: relative;
+		// 
 		width: 50%;
 		background-color: $bg_biege;
+
+		&--left {
+			display: flex;
+		}
 
 		&:nth-child(even) {
 			background: $bg_grey;
 		}
 	}
 
+	&__left-title {
+		margin: 0 15px 35px;
+		min-width: 40%;
+	}
 
-	&__left_title {
-		margin-bottom: 35px;
+	&__user-info {
+		margin: 15px 20px;
+	}
+
+	&__desc-text,
+	&__content {
+		margin: 2rem;
 	}
 
 	&__triangle-left {

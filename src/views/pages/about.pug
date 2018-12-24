@@ -9,11 +9,7 @@ block scripts
 block content
   section.hero
     .hero__socials
-      ul.socials
-        each  social in ['vk', 'github', 'in']
-          li.socials__item
-            a(href="").socials__link
-              +icon(social, 'socials__icon')
+      +socials('socials--white')
     .hero__menu
       a.hamburger
         .hamburger__bars
@@ -31,9 +27,9 @@ block content
     .hero__arrow-down
 
   section.about
-    .about__col
+    .about__col.about__col--left
       .about__triangle-left
-      .about__left_title
+      .about__left-title
         h1.title Обо мне
       .about__user-info
         .user-info
@@ -46,7 +42,7 @@ block content
             p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam modi et molestiae natus accusamus odit voluptatum debitis mollitia omnis eaque voluptates impedit deserunt officiis blanditiis, fugiat voluptatem facere incidunt ab!
     .about__col
       .about__triangle-right
-      .about__left_title
+      .about__left-title
         h2.subtitle Чем я могу вам быть вам полезен
       .about__desc-text.text-block
         p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem cupiditate distinctio exercitationem voluptate facilis quam aut ullam numquam modi vitae obcaecati aliquid inventore natus et perspiciatis fuga minima, earum adipisci?
@@ -69,13 +65,6 @@ block content
   section.map
     #map
     .map__content
-      .contacts
-        .contacts__title
-          h2.subtitle Контакты
-        ul.contacts__list
-          each contact in contactsList
-            li.contacts__item
-              +icon(contact.icon, 'contacts__icon')
-              .contacts__info #{contact.info}
+      +contacts
 
     
