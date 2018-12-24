@@ -1,72 +1,38 @@
 .hamburger {
-	position: static;
-	vertical-align: middle;
+	display: inline-flex;
 	position: relative;
-	height: 45px;
+	width: 40px;
+	height: 35px;
+	cursor: pointer;
 	align-items: center;
-
-
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
-
-	// Код из Бургеров
-	// position: relative;
-	// display: none;
-
-	// @include tablets {
-	// 	display: flex;
-	// 	position: fixed;
-	// 	top: 2.2rem;
-	// 	right: 2.2rem;
-	// 	z-index: 2;
-	// }
-
-	// Вынес из Таблетс выше
-
-	// position: fixed;
-	display: flex;
+	background-color: transparent;
+	padding: 0;
 
 	&__bars {
+		height: 5px;
+		width: 100%;
+		background-color: #fff;
+		-webkit-border-radius: .25rem;
+		border-radius: .25rem;
 
-		&,
 		&:before,
 		&:after {
-			background: #fff;
-			width: 40px;
-			height: 5px;
-			border-radius: rem(3px);
-			transition: transform .3s;
-		}
-
-		&:before,
-		&::after {
 			content: '';
 			display: block;
 			position: absolute;
+			height: 5px;
+			width: 100%;
+			background-color: #fff;
+			-webkit-border-radius: .25rem;
+			border-radius: .25rem;
 		}
 
 		&:before {
 			top: 0;
 		}
 
-		&::after {
+		&:after {
 			bottom: 0;
-
 		}
-
-		.is-active & {
-
-			background-color: transparent;
-
-			&:before {
-				transform: translateY(rem(9px)) rotate(45deg);
-			}
-
-			&::after {
-				transform: translateY(rem(-9px)) rotate(-45deg);
-			}
-		}
-
 	}
 }
