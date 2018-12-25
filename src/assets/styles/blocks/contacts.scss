@@ -1,18 +1,35 @@
 .contacts {
   &__list {
     display: flex;
-    flex-wrap: wrap;
+    .extend & {
+      flex-wrap: wrap;
+    }
+    .column & {
+      flex-direction: column;
+    }
     margin: 10px;
     ;
   }
   &__item {
     width: 50%;
-    margin-bottom: 25px;
+    .extend & {
+      margin-bottom: 25px;
+    }
+    .column & {
+      width: initial;
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
   }
   &__link {
     width: 100%;
     display: flex;
     align-items: center;
+  }
+  &__info {
+    .grey & {
+      color: $footer_text_color;
+    }
   }
   &__icon {
     fill: $blue;

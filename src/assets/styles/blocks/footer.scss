@@ -6,19 +6,27 @@
   max-height: 10%;
   background-color: rgba(#3b3e46, .85);
   color: $footer_text_color;
-  display: grid;
-  grid-template-areas: "info links contacts" "copyright copyright copyright";
+  &__main-content {
+    display: flex;
+  }
   &__info {
-    grid-area: info;
+    flex: 1;
+    min-width: 30%;
+    margin: 35px;
+    font-weight: 300;
   }
   &__links {
-    grid-area: links;
+    flex: 1;
+    min-width: 30%;
+    margin: 15px;
+    padding: 15px;
     color: #fff;
+    border-left: 1px solid $footer_text_color;
+    border-right: 1px solid $footer_text_color;
   }
   &__contacts {
-    grid-area: contacts;
-  }
-  &__copyright {
-    grid-area: copyright;
+    flex: 1;
+    min-width: 30%;
+    margin: 15px;
   }
 }

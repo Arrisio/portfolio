@@ -1,0 +1,16 @@
+.menu {
+  margin-bottom: 30px;
+  &__list {
+    .small & {
+      display: flex;
+    }
+  }
+  &__item {
+    margin: 5px;
+  }
+  &__link {
+    .white & {
+      color: white;
+    }
+  }
+}

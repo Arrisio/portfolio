@@ -1,15 +1,21 @@
 .socials {
-	display: flex;
-
-	&__item {
-		margin: 0 26px 0 0;
-		width: 35px;
-		height: 25px;
-	}
-
-	&__icon {
-		fill: $white;
-		width: 100%;
-		height: 100%;
-	}
+  display: flex;
+  &__item {
+    margin: 0 26px 0 0;
+    width: 35px;
+    height: 25px;
+  }
+  &__icon {
+    .white & {
+      fill: $white;
+    }
+    .grey & {
+      fill: $footer_text_color;
+    }
+    &:hover {
+      fill: $blue;
+    }
+    width: 100%;
+    height: 100%;
+  }
 }
