@@ -34,11 +34,13 @@ mixin user(photo, name, text, mod)
 
 mixin contacts(mod)
   .contacts(class=`${mod}`)
-        .contacts__title
-          h2.subtitle Контакты
-        ul.contacts__list
-          each contact in contactsList
-            li.contacts__item
-              if mod='add_icons'
-                +icon(contact.icon, 'contacts__icon')
-              .contacts__info #{contact.info}
+    if mod==='extend'
+      .contacts__title
+        h2.subtitle Контакты
+    ul.contacts__list
+      each contact in contactsList
+        li.contacts__item
+          a.contacts__link(href=`${contact.link}`)
+            if mod==='extend'
+              +icon(contact.icon, 'contacts__icon')
+            .contacts__info #{contact.info}

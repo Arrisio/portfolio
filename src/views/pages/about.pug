@@ -39,6 +39,7 @@ block content
             h2.subtitle Кто  я
           .user-info__text.text-block
             p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam modi et molestiae natus accusamus odit voluptatum debitis mollitia omnis eaque voluptates impedit deserunt officiis blanditiis, fugiat voluptatem facere incidunt ab!
+            br
             p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam modi et molestiae natus accusamus odit voluptatum debitis mollitia omnis eaque voluptates impedit deserunt officiis blanditiis, fugiat voluptatem facere incidunt ab!
     .about__col
       .about__triangle-right
@@ -63,8 +64,5 @@ block content
                       .skill__title #{skillName}
 
   section.map
-    #map
     .map__content
-      +contacts
-
-    
+      +contacts('extend')

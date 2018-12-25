@@ -24,7 +24,7 @@ body {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 button {
@@ -40,6 +40,11 @@ ul {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $text_color
 }
 
 h1,

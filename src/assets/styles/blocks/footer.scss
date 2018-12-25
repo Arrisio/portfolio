@@ -1,3 +1,24 @@
 .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 10%;
   background-color: rgba(#3b3e46, .85);
+  color: $footer_text_color;
+  display: grid;
+  grid-template-areas: "info links contacts" "copyright copyright copyright";
+  &__info {
+    grid-area: info;
+  }
+  &__links {
+    grid-area: links;
+    color: #fff;
+  }
+  &__contacts {
+    grid-area: contacts;
+  }
+  &__copyright {
+    grid-area: copyright;
+  }
 }

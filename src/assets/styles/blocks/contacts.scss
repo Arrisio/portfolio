@@ -1,0 +1,24 @@
+.contacts {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    ;
+  }
+  &__item {
+    width: 50%;
+    margin-bottom: 25px;
+  }
+  &__link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    fill: $blue;
+    height: 45px;
+    min-width: 45px;
+    width: 45px;
+    margin-right: 10px;
+  }
+}

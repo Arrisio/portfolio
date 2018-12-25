@@ -1,0 +1,12 @@
+.map {
+  position: relative;
+  background: url('./assets/images/map1800.jpg') center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__content {
+    width: 500px; // max-height: 33vh;
+    height: 250px;
+    background-color: rgba(#fff, .7);
+  }
+}
